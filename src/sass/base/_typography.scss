@@ -1,16 +1,49 @@
-/* typography */
+@font-face {
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 100 900;
+    src: url('/fonts/Fraunces[SOFT,WONK,opsz,wght].ttf') format('truetype'); 
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: 'Fraunces';
+    font-style: italic;
+    font-weight: 100 900;
+    src: url('/fonts/Fraunces-Italic[SOFT,WONK,opsz,wght].ttf') format('truetype'); 
+}
 
-$font: "Fraunces", serif;
 
-// body font styling vars
-$body-font-size: 120%;
-$body-font-weight: 350;
-$body-italic-weight: 100;
-
-// display font styling vars
-$display-font: $font;
-$display-weight: 900;
-$display-spacing: 0.15em;
-$display-title-size: 4rem;
+body {
+    font-family: "Fraunces", serif;
+    font-variation-settings: 
+      "opsz" $opsz-value,
+      "wght" $wght-value,
+      "soft" $soft-value,
+      "wonk" $wonk-value;
+  }
+  
+  h1 {
+    font-variation-settings: 
+      "opsz" $opsz-value,
+      "wght" $wght-value + 100,
+      "soft" $soft-value,
+      "wonk" $wonk-value;
+  }
+  
+  p {
+    font-variation-settings: 
+      "opsz" $opsz-value,
+      "wght" $wght-value,
+      "soft" $soft-value,
+      "wonk" $wonk-value;
+  }
+  
+  p.italic {
+    font-style: italic;
+    font-variation-settings: 
+      "opsz" $opsz-value,
+      "wght" $wght-value,
+      "soft" $soft-value,
+      "wonk" $wonk-value;
+  }
+  

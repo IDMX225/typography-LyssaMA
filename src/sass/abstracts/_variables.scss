@@ -2,15 +2,31 @@
 
 @use "./functions" as func;
 
-$bg-color: aliceblue;
-$bg-dark: func.shade($bg-color, 25%);
+$bg-color: rgb(130, 226, 235);
+$bg-dark: func.shade($bg-color, 40%);
 $bg-very-dark: func.shade($bg-color, 50%);
-$bg-light: func.tint($bg-color, 25%);
+$bg-light: func.tint($bg-color, 40%);
 $bg-very-light: func.tint($bg-color, 50%);
 
 
-$primary-color: teal;
-$primary-dark: func.shade($primary-color, 25%);
+$primary-color: rgb(110, 25, 138);
+$primary-dark: func.shade($primary-color, 40%);
 $primary-very-dark: func.shade($primary-color, 50%);
-$primary-light: func.tint($primary-color, 25%);
+$primary-light: func.tint($primary-color, 40%);
 $primary-very-light: func.tint($primary-color, 50%);
+
+
+
+$body-font-size: 140%;
+$body-font-weight: 400;
+$body-italic-weight: 200;
+
+$display-font: "Fraunces", serif;
+$display-weight: 900;
+$display-spacing: 0.2em;
+$display-title-size: 8rem;
+
+$opsz-value: 18;
+$wght-value: 700;
+$soft-value: 10;
+$wonk-value: 50;

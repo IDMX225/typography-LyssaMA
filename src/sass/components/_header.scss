@@ -1,37 +1,39 @@
 /* header */
 @use "../abstracts/variables" as var;
 @use "../abstracts/mixins";
-@use "../base/typography" as type;
 
 .header {
-  @include mixins.flex-column();
-  @include mixins.flex-center();
+  @include mixins.flex-column(); 
+  @include mixins.flex-center(); 
   flex-wrap: wrap;
   padding-top: 2rem;
+  text-align: center; 
 
   &__title {
-    color: var.$primary-very-dark;
-    font-weight: type.$display-weight;
-    font-size: type.$display-title-size;
-    letter-spacing: type.$display-spacing;
-    text-align: center;
+    color: var.$primary-very-dark; 
+    font-weight: var.$display-weight;
+    font-size: calc(var.$display-title-size * 4); 
+    margin: 0; 
   }
 
   &__img {
     max-width: 100%;
+    margin: 0 auto; 
+    display: block; 
   }
 
   &__desc {
     max-width: 55ch;
+    margin: 0 auto; 
     margin-bottom: 1rem;
-    font-size: type.$body-font-size;
-    font-weight: type.$body-font-weight;
+    font-size: var.$body-font-size; 
+    font-weight: var.$body-font-weight; 
     padding: 0rem 5vw;
 
     &--first {
       font-style: italic;
-      font-weight: type.$body-italic-weight;
-      letter-spacing: 0.15em;
+      font-weight: var.$body-italic-weight; 
+      letter-spacing: 0.15em; 
     }
   }
 }

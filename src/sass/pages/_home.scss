@@ -1,9 +1,18 @@
-/* home */
+/* _home.scss */
+/* Commented out top block 
 @use "../abstracts/variables" as var;
 @use "../base/typography" as type;
-@use "../components/header";
+@use "../components/header"; 
+*/
+
+@use "../abstracts/variables" as var;
 
 body {
-  font-family: type.$font;
+  font-family: var.$display-font; 
   background-color: var.$bg-very-light;
+}
+
+.home {
+  background-color: var.$bg-color;
+  color: var.$primary-color; 
 }
