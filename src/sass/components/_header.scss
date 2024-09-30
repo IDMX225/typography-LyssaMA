@@ -1,4 +1,3 @@
-/* header */
 @use "../abstracts/variables" as var;
 @use "../abstracts/mixins";
 
@@ -6,8 +5,11 @@
   @include mixins.flex-column(); 
   @include mixins.flex-center(); 
   flex-wrap: wrap;
-  padding-top: 2rem;
-  text-align: center; 
+  padding-top: 5rem;
+  .header {
+    text-align: center !important;
+  }
+  
 
   &__title {
     color: var.$primary-very-dark; 
@@ -24,7 +26,7 @@
 
   &__desc {
     max-width: 55ch;
-    margin: 0 auto; 
+    margin: 0 auto;
     margin-bottom: 1rem;
     font-size: var.$body-font-size; 
     font-weight: var.$body-font-weight; 
