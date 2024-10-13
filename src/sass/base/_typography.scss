@@ -1,49 +1,50 @@
+@use "../abstracts/variables" as var;
+
 @font-face {
-    font-family: 'Fraunces';
-    font-style: normal;
-    font-weight: 100 900;
-    src: url('/fonts/Fraunces[SOFT,WONK,opsz,wght].ttf') format('truetype'); 
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 100 900;
+  src: url('/fonts/Fraunces[SOFT,WONK,opsz,wght].ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Fraunces';
-    font-style: italic;
-    font-weight: 100 900;
-    src: url('/fonts/Fraunces-Italic[SOFT,WONK,opsz,wght].ttf') format('truetype'); 
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 100 900;
+  src: url('/fonts/Fraunces-Italic[SOFT,WONK,opsz,wght].ttf') format('truetype');
 }
 
 
 body {
-    font-family: "Fraunces", serif;
-    font-variation-settings: 
-      "opsz" $opsz-value,
-      "wght" $wght-value,
-      "soft" $soft-value,
-      "wonk" $wonk-value;
-  }
-  
-  h1 {
-    font-variation-settings: 
-      "opsz" $opsz-value,
-      "wght" $wght-value + 100,
-      "soft" $soft-value,
-      "wonk" $wonk-value;
-  }
-  
-  p {
-    font-variation-settings: 
-      "opsz" $opsz-value,
-      "wght" $wght-value,
-      "soft" $soft-value,
-      "wonk" $wonk-value;
-  }
-  
-  p.italic {
-    font-style: italic;
-    font-variation-settings: 
-      "opsz" $opsz-value,
-      "wght" $wght-value,
-      "soft" $soft-value,
-      "wonk" $wonk-value;
-  }
-  
+  font-family: "Fraunces", serif;
+  font-variation-settings:
+    "opsz" var.$opsz-value,
+    "wght" var.$wght-value,
+    "soft" var.$soft-value,
+    "wonk" var.$wonk-value;
+}
+
+h1 {
+  font-variation-settings:
+    "opsz" var.$opsz-value,
+    "wght" var.$wght-value + 100,
+    "soft" var.$soft-value,
+    "wonk" var.$wonk-value;
+}
+
+p {
+  font-variation-settings:
+    "opsz" var.$opsz-value,
+    "wght" var.$wght-value,
+    "soft" var.$soft-value,
+    "wonk" var.$wonk-value;
+}
+
+p.italic {
+  font-style: italic;
+  font-variation-settings:
+    "opsz" var.$opsz-value,
+    "wght" var.$wght-value,
+    "soft" var.$soft-value,
+    "wonk" var.$wonk-value;
+}
