@@ -1,16 +1,78 @@
-/* typography */
+// Define typography variables
+$opsz-value: 16;
+$wght-value: 500;
+$soft-value: 0;
+$wonk-value: 0;
+$display-weight: 700;
+$body-italic-weight: 500; 
+$display-title-size: 4rem; 
+$display-spacing: 0.15em;
+$body-font-size: 1rem;
+$body-font-weight: 400;
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,100..900;1,100..900&display=swap');
-
+// Add font-family variable
 $font: "Fraunces", serif;
 
-// body font styling vars
-$body-font-size: 120%;
-$body-font-weight: 350;
-$body-italic-weight: 100;
+// Load Fraunces font family
 
-// display font styling vars
-$display-font: $font;
-$display-weight: 900;
-$display-spacing: 0.15em;
-$display-title-size: 4rem;
+/* Regular weight font (not italic) */
+@font-face {
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 100 900; 
+    src: url('/fonts/Fraunces[SOFT,WONK,opsz,wght](1).ttf') format('truetype');
+    font-display: swap;  
+  }
+  
+  /* Italic font */
+  @font-face {
+    font-family: 'Fraunces';
+    font-style: italic;
+    font-weight: 100 900; 
+    src: url('/fonts/Fraunces-Italic[SOFT,WONK,opsz,wght](1).ttf') format('truetype');
+    font-display: swap;  
+  }
+  
+/* Body styling */
+body {
+  font-family: $font;  
+  font-variation-settings: 
+    "opsz" $opsz-value,
+    "wght" $wght-value,
+    "soft" $soft-value,
+    "wonk" $wonk-value;
+}
+
+/* Heading 1 styling */
+h1 {
+  font-family: $font; 
+  font-weight: $display-weight;
+  font-variation-settings: 
+    "opsz" $opsz-value,
+    "wght" $wght-value + 100,
+    "soft" $soft-value,
+    "wonk" $wonk-value;
+  font-size: $display-title-size;
+}
+
+/* Regular Paragraph styling */
+p {
+  font-family: $font;  
+  font-variation-settings: 
+    "opsz" $opsz-value,
+    "wght" $wght-value,
+    "soft" $soft-value,
+    "wonk" $wonk-value;
+}
+
+/* Paragraph with italic text */
+p.italic {
+  font-family: $font;  
+  font-style: italic;
+  font-weight: $body-italic-weight;
+  font-variation-settings: 
+    "opsz" $opsz-value,
+    "wght" $wght-value,
+    "soft" $soft-value,
+    "wonk" $wonk-value;
+} 
